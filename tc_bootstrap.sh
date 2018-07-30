@@ -15,8 +15,3 @@ if [ ! -d /opt/TeamCity ]; then
     echo "remote /tmp/$TCFILE"
     rm /tmp/$TCFILE
 fi
-
-#start TC
-/opt/TeamCity/bin/teamcity-server.sh start
-
-echo "You can access TeamCity by going to: http://127.0.0.1:8111"

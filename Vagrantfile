@@ -21,4 +21,7 @@ Vagrant.configure("2") do |config|
     tc.vm.provision :shell, path: "tc_bootstrap.sh"
   end
 
+  config.vm.provision :shell, :inline => "/opt/TeamCity/bin/runAll.sh start", run: "always"
+  config.vm.provision :shell, :inline => "echo \"You can access TeamCity by going to: http://127.0.0.1:8111\"", run: "always"
+
 end
